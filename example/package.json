@@ -10,10 +10,11 @@
     "react": "../node_modules/react"
   },
   "dependencies": {
-    "react-dom": "16.13.1",
+    "react-dom": "^16.13.1",
     "react-multistep": "file:.."
   },
   "devDependencies": {
-    "parcel": "1.12.4"
+    "parcel": "1.12.4",
+    "react": "^16.13.1"
   }
 }

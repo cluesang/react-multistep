@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { css, styled, setup } from 'goober'
 setup(React.createElement)
 
@@ -101,6 +101,10 @@ export default function MultiStep(props) {
   const previous = () => setStepState(compState > 0 ? compState - 1 : compState)
   const handleKeyDown = evt => evt.which === 13 ? next(props.steps.length) : {}
 
+  useEffect(() => {
+    setStepState(compState);
+  }, [props.steps]);
+
   const handleOnClick = evt => {
     if (
       evt.currentTarget.value === props.steps.length - 1 &&
@@ -120,7 +124,7 @@ export default function MultiStep(props) {
           key={i}
           value={i}
         >
-          <span>{i+1}</span>
+            <span>{i+1}. {s.name}</span>
         </li>
     ))
 

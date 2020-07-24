@@ -10,10 +10,10 @@ import StepThree from './stepThree'
 import StepFour from './stepFour'
 
 const steps = [
-  { component: <StepOne /> },
-  { component: <StepTwo /> },
-  { component: <StepThree /> },
-  { component: <StepFour /> }
+  { name: "Stage", component: <StepOne /> },
+  { name: "Stage", component: <StepTwo /> },
+  { name: "Stage", component: <StepThree /> },
+  { name: "Stage", component: <StepFour /> }
 ]
 
 const prevStyle = {'background': '#33c3f0', 'border-width': '2px'}
